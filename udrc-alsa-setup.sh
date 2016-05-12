@@ -1,28 +1,30 @@
 #!/bin/bash
 
-amixer -c sndrpiudrc -s << EOF
+amixer -c udrc -s << EOF
 #  Set input and output levels to 0dB
-sset 'ADC Level' 0dB
+sset 'ADC Level' 5.5dB
 sset 'LO Driver Gain' 0dB
-sset 'PCM' 0dB
+sset 'PCM' 15.5dB
 
-#  Turn on AFOUT
-sset 'Left Input Mixer IN1_L P' off
-sset 'Left Input Mixer CM1_L N' off
+#  Turn off AFOUT
+sset 'CM_L to Left Mixer Negative Resistor' 'Off'
+sset 'IN1_L to Left Mixer Positive Resistor' 'Off'
 
-#  Turn off DISCOUT
-sset 'Right Input Mixer IN1_R P' on
-sset 'Right Input Mixer CM1_R N' on 
+#  Turn on DISCOUT
+sset 'CM_R to Right Mixer Negative Resistor' '10 kOhm'
+sset 'IN1_R to Right Mixer Positive Resistor' '10 kOhm'
 
 #  Turn off unnecessary pins
-sset 'Left Input Mixer IN2_L P' off
-sset 'Left Input Mixer IN2_R N' off
-sset 'Left Input Mixer IN3_L P' off
-sset 'Left Input Mixer IN3_R N' off
-sset 'Right Input Mixer IN1_L N' off
-sset 'Right Input Mixer IN2_R P' off
-sset 'Right Input Mixer IN3_L N' off
-sset 'Right Input Mixer IN3_R P' off
+sset 'IN1_L to Right Mixer Negative Resistor' 'Off'
+sset 'IN1_R to Left Mixer Positive Resistor' 'Off'
+sset 'IN2_L to Left Mixer Positive Resistor' 'Off'
+sset 'IN2_L to Right Mixer Positive Resistor' 'Off'
+sset 'IN2_R to Left Mixer Negative Resistor' 'Off'
+sset 'IN2_R to Right Mixer Positive Resistor' 'Off'
+sset 'IN3_L to Left Mixer Positive Resistor' 'Off'
+sset 'IN3_L to Right Mixer Negative Resistor' 'Off'
+sset 'IN3_R to Left Mixer Negative Resistor' 'Off'
+sset 'IN3_R to Right Mixer Positive Resistor' 'Off'
 
 sset 'Mic PGA' off
 sset 'PGA Level' 0
