@@ -61,3 +61,4 @@ sset 'LOL Output Mixer L_DAC' off
 #  Turn off TONEIN
 sset 'LOR Output Mixer R_DAC' on
 EOF
+alsactl store
