@@ -35,8 +35,8 @@ done
 #PORTS="$PORTS $IPRouting TCP"
 
 if [ "$2" = "start" ]; then
-	upnpc -r $PORTS
+	upnpc -m $IPADDR -r $PORTS
 else
-        upnpc -d $PORTS
+        upnpc -m $IPADDR -d $PORTS
 fi
 echo done
