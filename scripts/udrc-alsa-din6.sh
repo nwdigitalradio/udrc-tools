@@ -2,7 +2,7 @@
 
 amixer -c udrc -s << EOF
 #  Set input and output levels to 0dB
-sset 'ADC Level' -5.0dB
+sset 'ADC Level' -2.0dB
 sset 'LO Driver Gain' 0dB
 sset 'PCM' 0.0dB
 
@@ -58,7 +58,7 @@ sset 'LO DAC' on
 #  Turn on AFIN
 sset 'LOL Output Mixer L_DAC' on
 
-#  Turn off TONEIN
-sset 'LOR Output Mixer R_DAC' off
+#  Turn on TONEIN
+sset 'LOR Output Mixer R_DAC' on
 alsactl save
 EOF
