@@ -61,4 +61,4 @@ sset 'LOL Output Mixer L_DAC' on
 #  Turn on TONEIN
 sset 'LOR Output Mixer R_DAC' on
 EOF
-sudo alsactl store
+alsactl store
