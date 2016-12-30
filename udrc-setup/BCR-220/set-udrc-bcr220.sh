@@ -3,9 +3,9 @@
 amixer -c udrc -s << EOF
 #  If you change your level settings, make a new script, save, and run it
 #  Set input and output levels to 0dB
-sset 'ADC Level' 5.5dB
-sset 'LO Driver Gain' 0.0dB
-sset 'PCM' 9.0dB
+sset 'ADC Level' 1.5dB
+sset 'LO Driver Gain' 9.0dB
+sset 'PCM' 0.0dB
 
 #  Turn off AFOUT
 sset 'CM_L to Left Mixer Negative Resistor' 'Off'
