@@ -5,7 +5,7 @@ amixer -c udrc -s << EOF
 #  Set input and output levels to 0dB
 sset 'ADC Level' 5.5dB
 sset 'LO Driver Gain' 0.0dB
-sset 'PCM' 0.0dB
+sset 'PCM' 2.0dB
 
 #  Turn off AFOUT
 sset 'CM_L to Left Mixer Negative Resistor' 'Off'
